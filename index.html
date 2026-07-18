@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>고트텍 GOAT TECH — 홈페이지 작업중</title>
+<meta name="description" content="고트텍(GOAT TECH) 홈페이지가 더욱 새롭고 편리한 서비스로 찾아뵙기 위해 준비중입니다.">
+<meta property="og:title" content="고트텍 GOAT TECH — 홈페이지 작업중">
+<meta property="og:description" content="곧 나은 모습으로 찾아뵙겠습니다.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0e17;
+    --accent: #4f8cff;
+    --accent-2: #8b5cf6;
+    --text: #e8ecf4;
+    --muted: #8a93a6;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Noto Sans KR', 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 24px;
+  }
+  /* 배경 그라디언트 오브 */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    z-index: 0;
+    animation: float 14s ease-in-out infinite;
+  }
+  .orb-1 { width: 480px; height: 480px; background: var(--accent); top: -120px; left: -100px; }
+  .orb-2 { width: 420px; height: 420px; background: var(--accent-2); bottom: -140px; right: -80px; animation-delay: -7s; }
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, -40px) scale(1.08); }
+  }
+  .content {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+    animation: rise 1s ease-out both;
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .brand {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.4rem, 8vw, 4.2rem);
+    letter-spacing: -0.02em;
+    background: linear-gradient(120deg, #fff 20%, var(--accent) 60%, var(--accent-2) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
+  }
+  .brand-kr {
+    font-weight: 500;
+    font-size: clamp(1rem, 3.5vw, 1.3rem);
+    letter-spacing: 0.3em;
+    color: var(--muted);
+    margin-bottom: 30px;
+    padding-left: 0.3em;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent);
+    background: rgba(79, 140, 255, 0.12);
+    border: 1px solid rgba(79, 140, 255, 0.3);
+    padding: 7px 16px;
+    border-radius: 999px;
+    margin-bottom: 32px;
+  }
+  .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
+  h1 {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 18px;
+  }
+  p.lead {
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+  .progress {
+    width: 100%;
+    max-width: 320px;
+    height: 6px;
+    margin: 0 auto 40px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .progress-bar {
+    height: 100%;
+    width: 40%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    animation: load 2.4s ease-in-out infinite;
+  }
+  @keyframes load {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(350%); }
+  }
+  .footer {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <main class="content">
+    <div class="badge"><span class="dot"></span> UNDER CONSTRUCTION</div>
+    <div class="brand">GOAT TECH</div>
+    <div class="brand-kr">고트텍</div>
+    <h1>홈페이지 작업중입니다</h1>
+    <p class="lead">더욱 새롭고 편리한 서비스로 고객님들께 보답하기 위해<br>열심히 홈페이지를 구축하고 있습니다.<br>곧 나은 모습으로 찾아뵙겠습니다.</p>
+    <div class="progress"><div class="progress-bar"></div></div>
+    <div class="footer">
+      문의 &middot; <a href="mailto:jhg@goattech.co.kr">jhg@goattech.co.kr</a>
+    </div>
+  </main>
+</body>
+</html>
